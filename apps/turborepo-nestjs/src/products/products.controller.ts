@@ -7,7 +7,7 @@ export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Post()
-  async createProduct(@Body() productData: CreateProductDto) { 
+  async createProduct(@Body() productData: CreateProductDto) {
     return this.productsService.createProduct(productData);
   }
   @Get()
@@ -19,6 +19,4 @@ export class ProductsController {
   async getProduct(@Param('id') id: string) {
     return this.productsService.getProduct(id);
   }
-
-
 }

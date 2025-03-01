@@ -1,5 +1,8 @@
 import { Product } from '@repo/types';
 import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
+
 const ProductsPage = async () => {
   const products = await fetch(`${process.env.API_URL}/products`, {
     next: {
